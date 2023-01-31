@@ -4,12 +4,28 @@ html {
 
 body {
     margin-bottom: 100px;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+.jumbotron {
+    height: 450px;
+    background-image: url(../img/bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -100px;
+    color: #eee;
+    overflow: hidden;
 }
 
 .jumbotron img {
     width: 200px;
-    border: 5px solid #666;
+    border: 5px solid #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 hr {
@@ -24,6 +40,33 @@ section {
 .portfolio {
     background-color: #eee;
 }
+
+.pKiri .pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0) rotate(15deg);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0) rotate(-15deg);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* .portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+} */
 
 .contact {
     min-height: 750px;
@@ -45,4 +88,8 @@ footer p {
 
 footer p i {
     color: salmon;
+}
+
+footer a {
+    color: white;
 }
